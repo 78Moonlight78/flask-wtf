@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<h2>Список профессий</h2>
+	{% if style == 'ul' %}
+
+		<ul>
+			{% for prof in professions %}
+				<li>{{ prof }}</li>
+			{% endfor %}
+		</ul>
+
+	{% elif style == 'ol' %}
+
+		<ol>
+			{% for prof in professions %}
+				<li>{{ prof }}</li>
+			{% endfor %}
+		</ol>
+
+	{% else %}
+
+		<p>Неверный параметр!</p>
+
+	{% endif %}
+	
+{% endblock %}
